@@ -55,11 +55,12 @@ const hasUniqueChars = (str) => {
 
     console.log('Runtime is', finshed2.preciseWords)
 
-    //Runtime = O(1)
+    //Runtime = O(n)
 
 
 
 //Pangram Sentence 
+    //Not Working
 const isPan = (str) => {
     let alph = /^[A-za-z]*$/
     if(str.match(alph) === true){
@@ -80,11 +81,11 @@ let finshed3 = perf.stop()
 
 console.log('Runtime is', finshed3.preciseWords)
 
-    //Runtime = O
+    //Runtime = O(1)
 
 
 //Longest Word
-
+    //Working
 const longestWord = (word1, word2) => {
     wordi = word1.split('')
     wordii = word2.split('')
