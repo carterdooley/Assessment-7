@@ -1,0 +1,22 @@
+Step 1:
+- Unshift is roughly a thousand times slower in this example
+
+	Methods			
+	Append Push()		                    Insert Unshift()	
+Array Sizes	                Time in Seconds(Subject to Metric Prefixs)			
+Tiny	                84.9 μs(MicroSeconds) s*10^-9		38.5 μs	
+Small	                102.7 μs		                    52 μs	
+Medium	                141.7 μs		                    184.5 μs	
+Large	                528.2 μs		                    9.2114 ms (miliseconds) s*10^-3	
+Extra Large 	        3.0158 ms		                    1.082376 s	
+
+
+
+Reasoning:
+    The reason the unshift method is slower than the push method is because of memory.
+The unshift method must "rellocate memory" in order to insert data before the data
+stored in the memory. The push method does not rely on rellocating memory majority of the
+time because it can simply add data to the end of the data that is listed.
+    The hard proof of this discovery comes from the fact that the push method does
+not change dramatically from the varibable number of inputs however the unshift
+method's time to complete a task does change from number of inputs.
