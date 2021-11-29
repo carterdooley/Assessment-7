@@ -50,9 +50,55 @@ const hasUniqueChars = (str) => {
     } 
 
     perf.start();
-    console.log(hasUniqueChars('Hello World'))
+    console.log(hasUniqueChars('Hel World'))
     let finshed2 = perf.stop()
 
     console.log('Runtime is', finshed2.preciseWords)
 
     //Runtime = O(1)
+
+
+
+//Pangram Sentence 
+const isPan = (str) => {
+    let alph = /^[A-za-z]*$/
+    if(str.match(alph) === true){
+        return 'String is a Pangram'
+    } else {
+        return 'String is not a Pangram'
+    }
+}
+
+
+let str1 = "The quick brown fox jumps over the lazy dog"
+let str2 = "The cat fell"
+
+perf.start();
+console.log(isPan(str1))
+console.log(isPan(str2))
+let finshed3 = perf.stop()
+
+console.log('Runtime is', finshed3.preciseWords)
+
+    //Runtime = O
+
+
+//Longest Word
+
+const longestWord = (word1, word2) => {
+    wordi = word1.split('')
+    wordii = word2.split('')
+    if (wordi.length > wordii.length){
+        return `${word1} is longer`
+    } else {
+        return `${word2} is longer`
+    }
+}
+
+perf.start();
+console.log(longestWord('Bread', 'Toaster'))
+let finshed4 = perf.stop()
+
+console.log('Runtime is', finshed4.preciseWords)
+
+//Runtime = O
